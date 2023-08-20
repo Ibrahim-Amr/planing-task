@@ -10,7 +10,7 @@ const navLinks: string[] = ["On Sale", "New Arrivals", "Brands"];
 
 const Navbar = () => {
   return (
-    <header className="bg-white px-2 py-4 dark:bg-neutral-800">
+    <header className="max-h-[76px] bg-white px-2 py-4 dark:bg-neutral-800">
       <nav className="mx-auto flex max-w-[1536px] items-center justify-between gap-10">
         <div className="flex flex-1 items-center gap-10">
           <Logo />

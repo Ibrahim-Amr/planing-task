@@ -9,7 +9,7 @@ const HeroHeader = () => {
         </h1>
       </div>
       <div>
-        <p className="max-w-[70ch] text-center font-medium leading-6 text-neutral-500 lg:text-start">
+        <p className="max-w-[70ch] text-center font-medium leading-6 text-neutral-500 dark:text-neutral-300 lg:text-start">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
           style.
@@ -23,15 +23,15 @@ const HeroHeader = () => {
       <div className="flex items-center justify-start gap-x-8">
         <div>
           <h3 className="text-4xl font-bold">200+</h3>
-          <p>International Brands</p>
+          <p className="dark:text-neutral-300">International Brands</p>
         </div>
         <div className="border-x border-neutral-400 px-8">
           <h3 className="text-4xl font-bold">2000+</h3>
-          <p>High-Quality Products</p>
+          <p className="dark:text-neutral-300">High-Quality Products</p>
         </div>
         <div>
           <h3 className="text-4xl font-bold">30000+</h3>
-          <p>Happy Customers</p>
+          <p className="dark:text-neutral-300">Happy Customers</p>
         </div>
       </div>
     </div>
