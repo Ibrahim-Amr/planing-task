@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import ThemeProvider from "./providers/themeProvider";
 import Navbar from "@/components/navbar/Navbar";
+import ContextProvider from "./providers/ContextProvider";
 
 const font = Roboto({ subsets: ["latin"], weight: "400" });
 
@@ -21,10 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} bg-white dark:bg-neutral-800`}>
         <main>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navbar />
-            {children}
-          </ThemeProvider>
+          <ContextProvider>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <Navbar />
+              {children}
+            </ThemeProvider>
+          </ContextProvider>
         </main>
       </body>
     </html>

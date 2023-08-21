@@ -5,18 +5,13 @@ export interface NavMenuLinks {
 export interface ProductType {
   id: number;
   title: string;
-  price: number;
   description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
   category: string;
-  image: string;
-  reviews?: [
-    {
-      rate: number ;
-      comment: string;
-    },
-  ];
-  rating: {
-    rate: number;
-    count: number;
-  };
+  thumbnail: string;
+  images: string[];
 }
