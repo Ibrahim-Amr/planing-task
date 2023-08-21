@@ -3,6 +3,7 @@ import Wrapper from "@/components/Wrapper";
 import Counter from "@/components/productPage/Counter";
 import ProductDetails from "@/components/productPage/ProductDetails";
 import ProductImage from "@/components/productPage/ProductImage";
+import Taps from "@/components/productPage/Taps/Taps";
 import { ProductType } from "@/types/types";
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
@@ -34,12 +35,15 @@ const page = ({ params }: { params: { Id: string } }) => {
   return (
     <section className="min-h-[calc(100vh-76px)] pt-20">
       <Wrapper>
-        <div className="flex flex-col items-start justify-between gap-10 p-2 md:flex-row">
+        <div className="mb-10 flex flex-col items-start justify-between gap-10 p-2 md:flex-row">
           <ProductImage product={product} />
           <div className="flex-1 space-y-10">
             <ProductDetails product={product} />
             <Counter />
           </div>
+        </div>
+        <div>
+          <Taps />
         </div>
       </Wrapper>
     </section>
