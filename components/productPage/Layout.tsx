@@ -39,7 +39,7 @@ const Layout = ({ params }: { params: { Id: string } }) => {
           <ProductImage product={product} />
           <div className="w-full flex-1 space-y-10">
             <ProductDetails product={product} />
-            <Counter />
+            <Counter product={product} />
           </div>
         </div>
         <div>

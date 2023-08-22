@@ -24,7 +24,9 @@ const Taps = ({
       <TabsContent value="rating">
         <Reviews setProduct={setProduct} />
         <div className="grid gap-5 lg:grid-cols-2">
-          {product.reviews?.map((review) => <ReviewCard review={review} />)}
+          {product.reviews?.map((review) => (
+            <ReviewCard key={review} review={review} />
+          ))}
         </div>
       </TabsContent>
       <TabsContent value="faq">

@@ -2,9 +2,12 @@
 import { Button } from "../ui/button";
 import { HiMinusSm } from "react-icons/hi";
 import { BiPlus } from "react-icons/bi";
-import { useState } from "react";
-const Counter = () => {
+import { useContext, useState } from "react";
+import ProductsContext from "@/context/ProductsContext";
+import { ProductType } from "@/types/types";
+const Counter = ({ product }: { product: ProductType }) => {
   const [counter, setCounter] = useState<number>(0);
+  const { addToCart } = useContext<any>(ProductsContext);
   return (
     <div className="flex w-full items-center justify-start gap-5">
       {counter ? (
@@ -25,7 +28,7 @@ const Counter = () => {
         </div>
       ) : (
         <Button
-          onClick={() => setCounter((prevState) => prevState + 1)}
+          onClick={() => addToCart(product)}
           className="w-full rounded-[62px] p-6 text-sm font-medium transition-all duration-300 ease-in-out active:scale-95"
         >
           Add to Cart
