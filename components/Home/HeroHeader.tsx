@@ -21,14 +21,14 @@ const HeroHeader = () => {
           Shop Now
         </Button>
       </div>
-      <div className="flex items-center justify-center gap-x-4 md:gap-x-8 lg:justify-start">
+      <div className="flex items-center justify-center gap-2 text-center lg:justify-start">
         <div>
           <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">200+</h3>
           <p className="text-sm dark:text-neutral-300  sm:text-xl">
             International Brands
           </p>
         </div>
-        <div className="border-x border-neutral-400 px-4 md:px-8">
+        <div className="border-x border-neutral-400 px-2">
           <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">2000+</h3>
           <p className="text-sm dark:text-neutral-300  sm:text-xl">
             High-Quality Products
