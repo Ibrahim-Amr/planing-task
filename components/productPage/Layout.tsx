@@ -33,7 +33,7 @@ const Layout = ({ params }: { params: { Id: string } }) => {
 
   if (!product) return;
   return (
-    <section className="min-h-screen pt-40">
+    <section className="min-h-screen py-2">
       <Wrapper>
         <div className="mb-10 flex flex-col items-start justify-between gap-10 p-2 lg:flex-row">
           <ProductImage product={product} />

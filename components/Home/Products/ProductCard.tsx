@@ -30,7 +30,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
                   <AiFillStar size={20} key={n} />
                 ))}
             </div>
-            <p>{product?.rating.toFixed(1)}/5</p>
+            <p>{product?.rating.toFixed()}/5</p>
           </div>
           <p className="space-x-2 text-2xl font-bold">
             <span> ${product?.price}</span>
