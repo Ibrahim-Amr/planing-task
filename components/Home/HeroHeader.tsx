@@ -1,3 +1,4 @@
+import Loading from "@/app/loading";
 import { Button } from "../ui/button";
 
 const HeroHeader = () => {

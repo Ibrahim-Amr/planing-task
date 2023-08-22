@@ -19,6 +19,7 @@ const NavSearch = ({ hidden }: { hidden?: boolean }) => {
         className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2"
       />
       <Input
+        disabled
         id="search"
         placeholder="Search for products..."
         type="text"
