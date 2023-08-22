@@ -17,7 +17,7 @@ interface Cart extends ProductType {
 }
 
 const Cart = () => {
-  const { cart } = useContext<any>(ProductsContext);
+  const { cart }: { cart: Cart[] } = useContext<any>(ProductsContext);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -38,12 +38,19 @@ const Cart = () => {
         className="flex min-w-[30rem] flex-col gap-y-2"
         align="end"
       >
-        {cart.len}
-        {cart.map((product: ProductType) => (
+        {cart.length > 0 ? (
+          cart.map((product: ProductType) => (
+            <DropdownMenuItem>
+              <CartItem product={product} />
+            </DropdownMenuItem>
+          ))
+        ) : (
           <DropdownMenuItem>
-            <CartItem product={product} />
+            <div className="flex w-full items-center justify-center">
+              <p>No products in the cart</p>
+            </div>
           </DropdownMenuItem>
-        ))}
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );
