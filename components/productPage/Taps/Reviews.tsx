@@ -26,13 +26,13 @@ const Reviews = ({
   }, [review]);
 
   return (
-    <div className="px-2 py-5">
+    <div className="py-5">
       <form
         className="flex items-center justify-between gap-x-5"
         onSubmit={AddReview}
       >
         <Input
-          className="rounded-md border "
+          className="rounded-md border bg-white dark:border-white placeholder:dark:text-white"
           placeholder="Write a review"
           value={review}
           onChange={(e) => {
@@ -41,7 +41,7 @@ const Reviews = ({
         />
         <Button
           onClick={AddReview}
-          className="w-52 transition-all ease-in-out active:scale-95"
+          className="w-52 py-6 transition-all ease-in-out active:scale-95"
         >
           Add Review
         </Button>

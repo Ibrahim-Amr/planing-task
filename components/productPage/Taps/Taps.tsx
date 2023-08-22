@@ -12,7 +12,7 @@ const Taps = ({
   setProduct: Dispatch<SetStateAction<ProductType | undefined>>;
 }) => {
   return (
-    <Tabs defaultValue="rating" className="w-full">
+    <Tabs defaultValue="rating" className="w-full px-2 py-5">
       <TabsList className="grid w-full grid-cols-3">
         <TabsTrigger value="details">Product Details</TabsTrigger>
         <TabsTrigger value="rating">Rating & Reviews</TabsTrigger>
@@ -23,7 +23,7 @@ const Taps = ({
       </TabsContent>
       <TabsContent value="rating">
         <Reviews setProduct={setProduct} />
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid gap-5 lg:grid-cols-2">
           {product.reviews?.map((review) => <ReviewCard review={review} />)}
         </div>
       </TabsContent>
