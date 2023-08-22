@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (
-    <Link href={`/product/${product?.id}`}>
+    <Link href={`/product/${product?.id}`} className="block w-full p-2">
       <Card className="min-w-[350px] overflow-hidden">
         <CardHeader>
           <div className="h-[400px] border-b">

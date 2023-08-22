@@ -38,6 +38,7 @@ const Cart = () => {
         className="flex min-w-[30rem] flex-col gap-y-2"
         align="end"
       >
+        {cart.len}
         {cart.map((product: ProductType) => (
           <DropdownMenuItem>
             <CartItem product={product} />
