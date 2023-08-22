@@ -20,18 +20,24 @@ const HeroHeader = () => {
           Shop Now
         </Button>
       </div>
-      <div className="flex items-center justify-start gap-x-8">
+      <div className="flex items-center justify-start gap-x-4 md:gap-x-8">
         <div>
-          <h3 className="text-4xl font-bold">200+</h3>
-          <p className="dark:text-neutral-300">International Brands</p>
+          <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">200+</h3>
+          <p className="text-sm dark:text-neutral-300  sm:text-xl">
+            International Brands
+          </p>
         </div>
-        <div className="border-x border-neutral-400 px-8">
-          <h3 className="text-4xl font-bold">2000+</h3>
-          <p className="dark:text-neutral-300">High-Quality Products</p>
+        <div className="border-x border-neutral-400 px-4 md:px-8">
+          <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">2000+</h3>
+          <p className="text-sm dark:text-neutral-300  sm:text-xl">
+            High-Quality Products
+          </p>
         </div>
         <div>
-          <h3 className="text-4xl font-bold">30000+</h3>
-          <p className="dark:text-neutral-300">Happy Customers</p>
+          <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">30000+</h3>
+          <p className="text-sm dark:text-neutral-300  sm:text-xl">
+            Happy Customers
+          </p>
         </div>
       </div>
     </div>

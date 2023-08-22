@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hero from "@/public/hero.png";
+import hero from "@/public/hero.webp";
 const HeroImage = () => {
   return (
     <div className="relative h-full w-full overflow-hidden lg:max-w-[50%]">
