@@ -7,8 +7,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useContext } from "react";
+import ProductsContext from "@/context/ProductsContext";
+import { ProductType } from "@/types/types";
+import CartItem from "../CartItem";
+
+interface Cart extends ProductType {
+  quantity?: number;
+}
 
 const Cart = () => {
+  const { cart } = useContext<any>(ProductsContext);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -25,9 +34,15 @@ const Cart = () => {
           <span className="sr-only">Cart</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem>Item1</DropdownMenuItem>
-        <DropdownMenuItem>Item2</DropdownMenuItem>
+      <DropdownMenuContent
+        className="flex min-w-[30rem] flex-col gap-y-2"
+        align="end"
+      >
+        {cart.map((product: ProductType) => (
+          <DropdownMenuItem>
+            <CartItem product={product} />
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );

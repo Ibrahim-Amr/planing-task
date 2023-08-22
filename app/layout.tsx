@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import ThemeProvider from "./providers/themeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import ContextProvider from "./providers/ContextProvider";
+import { Toaster } from "react-hot-toast";
 
 const font = Roboto({ subsets: ["latin"], weight: "400" });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Navbar />
               {children}
+              <Toaster />
             </ThemeProvider>
           </ContextProvider>
         </main>
