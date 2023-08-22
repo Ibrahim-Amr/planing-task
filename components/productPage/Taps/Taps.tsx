@@ -19,7 +19,9 @@ const Taps = ({
         <TabsTrigger value="faq">FAQs</TabsTrigger>
       </TabsList>
       <TabsContent value="details">
-        <h1>details</h1>
+        <div className="flex w-full items-center justify-center py-5 text-2xl font-medium capitalize">
+          <p>No details available</p>
+        </div>
       </TabsContent>
       <TabsContent value="rating">
         <Reviews setProduct={setProduct} />
@@ -30,7 +32,9 @@ const Taps = ({
         </div>
       </TabsContent>
       <TabsContent value="faq">
-        <h1>faq</h1>
+        <div className="flex w-full items-center justify-center py-5 text-2xl font-medium capitalize">
+          <p>No FAQs available</p>
+        </div>
       </TabsContent>
     </Tabs>
   );

@@ -11,6 +11,7 @@ const ProductImage = ({ product }: { product: ProductType }) => {
         width={400}
         height={400}
         className="h-full w-full rounded-xl"
+        property="true"
       />
     </div>
   );

@@ -7,15 +7,16 @@ import Link from "next/link";
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <Link href={`/product/${product?.id}`} className="block w-full p-2">
-      <Card className="min-w-[350px] overflow-hidden">
+      <Card className="min-w-[350px] overflow-hidden transition-all ease-in-out hover:shadow-lg">
         <CardHeader>
-          <div className="h-[400px] border-b">
+          <div className="h-[250px] border-b">
             <Image
               src={product?.images[0] || ""}
               width={300}
               height={300}
               alt="shirt"
               className="h-full w-full object-cover"
+              property="true"
             />
           </div>
         </CardHeader>
