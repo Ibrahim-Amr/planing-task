@@ -5,6 +5,7 @@ import ThemeProvider from "./providers/themeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import ContextProvider from "./providers/ContextProvider";
 import { Toaster } from "react-hot-toast";
+import ScrollRestore from "@/components/ScrollRestore";
 
 const font = Roboto({ subsets: ["latin"], weight: "400" });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
               <Navbar />
               {children}
               <Toaster />
+              <ScrollRestore />
             </ThemeProvider>
           </ContextProvider>
         </main>
