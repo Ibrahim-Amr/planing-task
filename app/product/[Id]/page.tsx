@@ -8,7 +8,7 @@ import { ProductType } from "@/types/types";
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 
-const page = ({ params }: { params: { Id: string } }) => {
+const Product = ({ params }: { params: { Id: string } }) => {
   const [product, setProduct] = useState<ProductType>();
 
   const [loading, setLoading] = useState<boolean>();
@@ -35,19 +35,19 @@ const page = ({ params }: { params: { Id: string } }) => {
   return (
     <section className="min-h-[calc(100vh-76px)] pt-20">
       <Wrapper>
-        <div className="mb-10 flex flex-col items-start justify-between gap-10 p-2 md:flex-row">
+        <div className="mb-10 flex flex-col items-start justify-between gap-10 p-2 lg:flex-row">
           <ProductImage product={product} />
-          <div className="flex-1 space-y-10">
+          <div className="w-full flex-1 space-y-10">
             <ProductDetails product={product} />
             <Counter />
           </div>
         </div>
         <div>
-          <Taps />
+          <Taps product={product} setProduct={setProduct} />
         </div>
       </Wrapper>
     </section>
   );
 };
 
-export default page;
+export default Product;

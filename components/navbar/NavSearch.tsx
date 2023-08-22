@@ -23,7 +23,9 @@ const NavSearch = ({ hidden }: { hidden?: boolean }) => {
         placeholder="Search for products..."
         type="text"
         className="
+          border-none
           bg-neutral-100
+          outline-none
           dark:bg-white
         "
       />

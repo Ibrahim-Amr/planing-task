@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProductType } from "@/types/types";
+import { Dispatch, SetStateAction } from "react";
+import Reviews from "./Reviews";
+import ReviewCard from "./ReviewCard";
 
-const Taps = () => {
+const Taps = ({
+  product,
+  setProduct,
+}: {
+  product: ProductType;
+  setProduct: Dispatch<SetStateAction<ProductType | undefined>>;
+}) => {
   return (
     <Tabs defaultValue="rating" className="w-full">
       <TabsList className="grid w-full grid-cols-3">
@@ -22,7 +22,10 @@ const Taps = () => {
         <h1>details</h1>
       </TabsContent>
       <TabsContent value="rating">
-        <h1>rating</h1>
+        <Reviews setProduct={setProduct} />
+        <div className="grid grid-cols-2 gap-5">
+          {product.reviews?.map((review) => <ReviewCard review={review} />)}
+        </div>
       </TabsContent>
       <TabsContent value="faq">
         <h1>faq</h1>
