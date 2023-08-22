@@ -20,7 +20,7 @@ const HeroHeader = () => {
           Shop Now
         </Button>
       </div>
-      <div className="flex items-center justify-start gap-x-4 md:gap-x-8">
+      <div className="flex items-center justify-center gap-x-4 md:gap-x-8 lg:justify-start">
         <div>
           <h3 className="text-xl font-bold sm:text-3xl md:text-4xl">200+</h3>
           <p className="text-sm dark:text-neutral-300  sm:text-xl">
