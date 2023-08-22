@@ -46,7 +46,7 @@ const NewArrivals = () => {
       <Wrapper>
         <SectionHeader label="New Arrivals" />
         {products.length === 0 ? (
-          <div className="flex flex-wrap items-center justify-around gap-4 py-5">
+          <div className="grid grid-cols-1 gap-4 py-5 md:grid-cols-3 xl:grid-cols-4">
             <ProductsSkeleton />
             <ProductsSkeleton />
             <ProductsSkeleton />
@@ -54,7 +54,7 @@ const NewArrivals = () => {
           </div>
         ) : (
           <div>
-            <div className="mb-5 grid grid-cols-1 place-content-center place-items-start gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="mb-5 grid grid-cols-1 place-content-center place-items-start gap-2 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-5">
               {products.map((product: ProductType) => (
                 <ProductCard
                   key={product.title + product.id}

@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <section className="overflow-hidden">
       <Hero />
       <NewArrivals />
-    </>
+    </section>
   );
 }
