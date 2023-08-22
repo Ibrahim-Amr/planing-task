@@ -29,7 +29,7 @@ const Layout = ({ params }: { params: { Id: string } }) => {
 
   useEffect(() => {
     fetchProducts();
-  }, [params.Id]);
+  }, [params.Id, fetchProducts]);
 
   if (!product) return;
   return (
