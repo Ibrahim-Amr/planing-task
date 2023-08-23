@@ -32,7 +32,7 @@ const Reviews = ({
         console.log("error adding reviews", err);
       }
     },
-    [Id],
+    [review],
   );
 
   return (
