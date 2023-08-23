@@ -11,6 +11,7 @@ interface ContextValues {
   addToCart: (product: ProductType) => void;
   productQuantity: (id: number) => number;
   removeFromCart: (product: ProductType) => void;
+  totalQuantity: number;
 }
 
 const ProductsContext = createContext<ContextValues | null>(null);
@@ -68,6 +69,7 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
     addToCart,
     productQuantity,
     removeFromCart,
+    totalQuantity,
   };
   return (
     <ProductsContext.Provider value={contextValues}>

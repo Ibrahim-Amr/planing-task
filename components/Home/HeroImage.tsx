@@ -7,7 +7,7 @@ const HeroImage = () => {
         src={hero}
         alt="hero"
         className="h-full w-full object-cover"
-        property="true"
+        priority={true}
       />
     </div>
   );

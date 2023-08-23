@@ -14,5 +14,5 @@ export interface ProductType {
   category: string;
   thumbnail: string;
   images: string[];
-  reviews: [];
+  reviews: string[];
 }

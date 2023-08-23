@@ -1,4 +1,4 @@
-import Layout from "@/components/productPage/Layout";
+import ProductPage from "@/components/productPage/ProductPage";
 import axios from "axios";
 import { Metadata } from "next";
 
@@ -41,7 +41,7 @@ export const generateMetadata = async ({
   };
 };
 const Product = ({ params }: { params: { Id: string } }) => {
-  return <Layout params={params} />;
+  return <ProductPage params={params} />;
 };
 
 export default Product;

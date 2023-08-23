@@ -15,7 +15,7 @@ const CartItem = ({ product }: { product: ProductType }) => {
           height={100}
           src={product.thumbnail}
           alt={product.title}
-          property="true"
+          priority={true}
         />
       </div>
       <div className="font-bold capitalize">

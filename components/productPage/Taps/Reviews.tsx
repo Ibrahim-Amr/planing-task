@@ -2,7 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ProductType } from "@/types/types";
-import { Dispatch, SetStateAction, useCallback, useState } from "react";
+import { useParams } from "next/navigation";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useState,
+  FormEvent,
+} from "react";
 
 const Reviews = ({
   setProduct,
@@ -10,20 +17,23 @@ const Reviews = ({
   setProduct: Dispatch<SetStateAction<ProductType | undefined | any>>;
 }) => {
   const [review, setReview] = useState<string>("");
+  const { Id } = useParams();
 
-  const AddReview = useCallback(() => {
-    try {
-      if (review !== "") {
+  const AddReview = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      try {
         setProduct((prevState: ProductType) => ({
           ...prevState,
           reviews: [...(prevState.reviews || []), review],
         }));
         setReview("");
+      } catch (err) {
+        console.log("error adding reviews", err);
       }
-    } catch (err) {
-      console.log("error adding reviews", err);
-    }
-  }, [review]);
+    },
+    [Id],
+  );
 
   return (
     <div className="py-5">
@@ -40,7 +50,7 @@ const Reviews = ({
           }}
         />
         <Button
-          onClick={AddReview}
+          type="submit"
           className="w-52 py-6 transition-all ease-in-out active:scale-95"
         >
           Add Review

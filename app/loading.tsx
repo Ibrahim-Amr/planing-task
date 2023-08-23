@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <section className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90">
+    <section className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70">
       <div role="status" className="z-[1500]">
         <svg
           aria-hidden="true"
