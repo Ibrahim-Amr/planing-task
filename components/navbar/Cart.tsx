@@ -55,7 +55,7 @@ const Cart = () => {
           )}
         </DropdownMenuContent>
       </DropdownMenu>
-      <div className="absolute -bottom-2 -right-1">
+      <div className="absolute -right-1 -top-2">
         <span>{totalQuantity}</span>
       </div>
     </div>
