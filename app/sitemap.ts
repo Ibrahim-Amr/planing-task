@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   return [
-    ...data.map((product: ProductType) => ({
+    ...data.products.map((product: ProductType) => ({
       url: `https://planing-task.vercel.app/product/${product.id}`,
       lastModified: new Date(),
     })),
