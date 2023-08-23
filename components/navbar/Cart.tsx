@@ -40,7 +40,7 @@ const Cart = () => {
       >
         {cart.length > 0 ? (
           cart.map((product: ProductType) => (
-            <DropdownMenuItem>
+            <DropdownMenuItem key={product.id}>
               <CartItem product={product} />
             </DropdownMenuItem>
           ))

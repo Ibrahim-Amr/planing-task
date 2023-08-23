@@ -27,6 +27,10 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
     return quantity;
   };
 
+  const totalQuantity = cart.reduce((total, item) => {
+    return total + (item.quantity as number);
+  }, 0);
+
   const addToCart = (product: ProductType) => {
     const productIndex: any = cart?.findIndex((item) => item.id === product.id);
     if (productIndex === -1) {

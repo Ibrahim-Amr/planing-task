@@ -6,17 +6,21 @@ import Link from "next/link";
 
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (
-    <Link href={`/product/${product?.id}`} className="block w-full p-2">
+    <Link
+      href={`/product/${product?.id}`}
+      className="group block w-full overflow-hidden p-2"
+    >
       <Card className="overflow-hidden transition-all ease-in-out hover:shadow-lg xl:min-w-[350px]">
         <CardHeader>
-          <div className="h-[250px] border-b">
+          <div className="relative h-[250px] overflow-hidden border-b">
             <Image
               src={product?.images[0] || ""}
-              width={300}
-              height={300}
+              fill
               alt="shirt"
-              className="h-full w-full object-cover"
-              property="true"
+              className="object-contain transition-all duration-300 ease-out group-hover:scale-105"
+              sizes="350"
+              priority={true}
+              // placeholder="blur"
             />
           </div>
         </CardHeader>
@@ -24,11 +28,12 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           <p className="text-xl font-bold">{product?.title}</p>
           <div className="flex items-center justify-between gap-x-5">
             <div className="flex items-center justify-start gap-1 text-orange-300">
-              {Array.from({ length: Math.round(product?.rating || 1) }, () => 0)
-                .slice(0, 9)
-                .map((n) => (
-                  <AiFillStar size={20} key={n} />
-                ))}
+              {Array.from(
+                { length: Math.round(product?.rating || 1) },
+                (_, index) => (
+                  <AiFillStar size={20} key={index} />
+                ),
+              )}
             </div>
             <p>{product?.rating.toFixed()}/5</p>
           </div>

@@ -8,11 +8,12 @@ const ProductDetails = ({ product }: { product: ProductType }) => {
         <h2 className="text-fluid-sm font-bold">{product?.title}</h2>
         <div className="flex w-fit items-center justify-between gap-x-5">
           <div className="flex items-center justify-start gap-1 text-orange-300">
-            {Array.from({ length: Math.round(product?.rating) }, () => 0)
-              .slice(0, 9)
-              .map((n) => (
-                <AiFillStar size={25} key={n} />
-              ))}
+            {Array.from(
+              { length: Math.round(product?.rating || 1) },
+              (_, index) => (
+                <AiFillStar size={20} key={index} />
+              ),
+            )}
           </div>
           <p className="font-medium">
             {Math.round(product?.rating || 1)}/
