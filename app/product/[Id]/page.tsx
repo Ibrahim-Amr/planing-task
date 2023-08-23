@@ -17,7 +17,7 @@ export const generateMetadata = async ({
     openGraph: {
       type: "website",
       url: `https://planing-task.vercel.app/products/${data.id}`,
-      title: `My ShopSpectrum - ${data.title}`,
+      title: `ShopSpectrum - ${data.title}`,
       description:
         "Your Ultimate Destination for shoping online. Explore a diverse range of high-quality products and more. Shop now for a seamless and delightful shopping journey!",
       siteName: "ShopSpectrum",

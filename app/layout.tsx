@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   creator: "Ibrahim Omar",
   appleWebApp: {
     capable: true,
-    title: "My ShopSpectrum",
+    title: "ShopSpectrum",
     statusBarStyle: "black-translucent",
   },
   openGraph: {
-    title: `My ShopSpectrum`,
+    title: `ShopSpectrum`,
     description:
       "Your Ultimate Destination for shoping online. Explore a diverse range of high-quality products and more. Shop now for a seamless and delightful shopping journey!",
     type: "website",

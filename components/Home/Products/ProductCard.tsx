@@ -25,7 +25,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           </div>
         </CardHeader>
         <CardContent className="flex flex-col items-start justify-center space-y-2 p-3">
-          <p className="text-xl font-bold truncate">{product?.title}</p>
+          <p className="truncate text-xl font-bold ">{product?.title}</p>
           <div className="flex items-center justify-between gap-x-5">
             <div className="flex items-center justify-start gap-1 text-orange-300">
               {Array.from(
